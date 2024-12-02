@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dating App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="user-profile">
+            <h2>Create Your Profile</h2>
+            <form id="profileForm">
+                <input type="text" id="username" placeholder="Enter your name" required />
+                <input type="number" id="age" placeholder="Enter your age" required />
+                <input type="text" id="interests" placeholder="Your Interests" required />
+                
+                <div>
+                    <label>Interested in: </label>
+                    <select id="genderPreference">
+                        <option value="both">Both</option>
+                        <option value="men">Men</option>
+                        <option value="women">Women</option>
+                    </select>
+                </div>
+
+                <button type="submit">Create Profile</button>
+            </form>
+        </div>
+
+        <div class="matches-container" style="display: none;">
+            <h2>Find Matches</h2>
+            <div id="profileDisplay"></div>
+            <button id="likeBtn">Like</button>
+            <button id="dislikeBtn">Dislike</button>
+        </div>
+
+        <div class="chat-container" style="display: none;">
+            <h2>Chat with Your Match</h2>
+            <div id="chatBox"></div>
+            <input type="text" id="chatInput" placeholder="Type your message" />
+            <button id="sendBtn">Send</button>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
